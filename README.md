@@ -13,19 +13,31 @@ Contents
   * [ Exercise 1](#Day01a)
   * [ Exercise 2](#Day01b)
 
-<a name="Day01a"></a>
-## Day 01 Exercise 1
+## Day 01
 https://adventofcode.com/2018/day/1
-### Testing
+
+<a name="Day01a"></a>
+### Day 01 Exercise 1
+
+#### Testing
 ```
-cargo test
+cargo test day_01a
 ```
 
-### Run On Example Input
+#### Run On Example Input
 ```
-cargo run day_01a -- < input/day_01a/input.txt
+cargo run --bin day_01a -- < input/day_01a/input.txt
 ```
 
 <a name="Day01b"></a>
-## Day 01 Exercise 2
-// TODO
+### Day 01 Exercise 2
+
+#### Testing
+```
+cargo test day_01a
+```
+
+#### Run On Example Input
+```
+cargo run --bin day_01b -- < input/day_01a/input.txt
+```
