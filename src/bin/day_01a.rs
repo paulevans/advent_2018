@@ -40,11 +40,11 @@ pub fn day_01a<T: BufRead>(mut handle: T, start_frequency: i32) -> i32 {
                     output_handle,
                     "  - Current frequency {}, change of {:+}; resulting frequency {}.",
                     previous_frequency, frequency_delta, current_frequency
-                );
+                ).unwrap();
             }
             // Parsing failed, report error but continue processing stream
             Err(e) => {
-                writeln!(output_handle, "ERROR: Input not integer. {}", e);
+                writeln!(output_handle, "ERROR: Input not integer. {}", e).unwrap();
             }
         }
 

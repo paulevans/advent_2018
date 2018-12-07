@@ -47,7 +47,7 @@ fn read_frequency_deltas<T: BufRead>(handle: &mut T, frequency_deltas: &mut Vec<
             }
             // Parsing failed, report error but continue processing stream
             Err(e) => {
-                writeln!(output_handle, "ERROR: Input not integer. {}", e);
+                writeln!(output_handle, "ERROR: Input not integer. {}", e).unwrap();
             }
         }
 
@@ -115,7 +115,7 @@ pub fn day_01b_old<T: BufRead>(
                     frequency_values[frequency_values.len() - 1],
                     frequency_delta,
                     current_frequency
-                );
+                ).unwrap();
 
                 if frequency_values.contains(&current_frequency) {
                     return Ok(current_frequency);
@@ -125,7 +125,7 @@ pub fn day_01b_old<T: BufRead>(
             }
             // Parsing failed, report error but continue processing stream
             Err(e) => {
-                writeln!(output_handle, "ERROR: Input not integer. {}", e);
+                writeln!(output_handle, "ERROR: Input not integer. {}", e).unwrap();
             }
         }
 
